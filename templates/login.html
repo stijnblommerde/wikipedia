@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form id="login" method="post">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<td>Login</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="login_label">Username</td>
+				<td class="login_input">
+					<input class="input-login" type="text" name="username" value="{{return_username}}"></td>
+				</td>
+				<td class="error">{{error_username}}</td>
+			</tr>
+			<tr>
+				<td class="login_label">Password</td>
+				<td class="login_input"><input class="input-login" type="password" name="password" value></td>
+				<td class="error">{{error_password}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="submit">
+</form>
+<br />
+<p class="error">{{error_login}}</p>
+
+{% endblock %}

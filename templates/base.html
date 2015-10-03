@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Wiki</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+	</head>
+	<body>
+		<header>
+			<a href="/" class="main-title">
+				<img src="/images/wikipedia_logo.png">
+			</a>
+
+			<!-- user is logged in -->
+			{% if user %}
+
+				<nav>
+					
+					<!-- buttons visible on all pages -->
+					<div class="authorize">
+						{{user.username}} (<a href="/logout">logout</a>)
+					</div>
+
+					<!-- buttons visible on page.html and edit.html -->
+					{% if main %}
+					<div class="edit_history">
+						<a class="edit" href="/_edit{{path}}">edit</a>
+						|
+						<a class="history" href="/_history{{path}}">history</a>	
+					</div>
+							
+					{% endif %}
+
+					<!-- buttons visible on page history.html -->
+					{% if history %}
+					<div class="edit_view">
+						<a class="edit" href="/_edit{{path}}">edit</a>
+						|
+						<a class="view" href="{{path}}">view</a>
+					</div>			
+					{% endif %}
+
+
+
+				</nav>
+			
+			<!-- user is logged out -->
+			{% else %}
+
+				<nav>
+					<!-- buttons visible on all pages -->			
+					<div class="authorize">
+						<a href="/login">login</a>
+						|
+						<a href="/signup">signup</a>
+					</div>
+
+					<!-- buttons visible on page.html and edit.html -->
+					{% if main %}
+					<a class="history" href="/_history{{path}}">history</a>			
+					{% endif %}
+
+					<!-- buttons visible history.html -->
+					{% if history %}
+					<a class="history" href="{{path}}">view</a>			
+					{% endif %}
+
+
+				</nav>
+
+			{% endif %}
+
+		</header>
+		<br class="clear"/>
+			{% block content %}
+			{% endblock %}
+				
+	</body>
+	
+</html>

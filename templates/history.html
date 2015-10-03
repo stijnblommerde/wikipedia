@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table id="history" class="table table-striped">
+	{% for page in pages %}		
+		<tr>
+			<td class="table-created">{{page.created.strftime("%c")}}</td>
+			<td class="table-content">{{page.content[:65]}}</td>
+						
+			<!-- user is loggin in: show view and edit button -->
+			{% if user %}
+			<td class="history-cell">
+				<a class="history-cell" href="{{path}}?v={{page.version}}">view</a>
+			</td>
+			<td class="history-cell">
+				<a class="history-cell" href="/_edit{{path}}?v={{page.version}}">edit</a>
+			</td>
+			<!-- user is logged out: show only view button -->
+			{% else %}
+			<td class="history-cell">
+				<a class="history-cell" href="{{path}}?v={{page.version}}">view</a>
+			</td>		
+
+			{% endif %}
+
+		</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}

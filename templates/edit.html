@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form id="edit" method="post">
+	<textarea name="content">{{page.content}}</textarea>
+	<br>
+	<input class="save-button" type="submit" name="save" value="Save">
+</form>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+/** {
+	border: solid;
+}*/
+
+/* generic styles */
+
+body {
+	font-family: "open sans", sans-serif;
+	width: 800px;
+	margin: 0 auto;
+	padding: 10px;
+	position: relative;
+	font-size:16px;
+}
+
+.error {
+	color: red;
+}
+
+
+/* element styles */
+
+header a.main-title {
+    display: block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    float: left;	
+}
+
+header a {
+	font-size: 16px;
+	color: gray;
+	text-decoration: none;
+}
+
+header .authorize {
+	color: gray;
+	float: right;
+}
+
+header .edit_history, .edit_view, .history {
+	float: right;
+	margin-right: 10px;
+}
+
+br.clear {
+	clear: both;
+}
+
+#page {
+	background-color: #eee;
+	padding: 20px;
+	width: 800px;
+	min-height: 400px;
+}
+
+#edit textarea {
+	width: 800px;
+	height: 400px;
+}
+
+#login thead {
+	font-size: 25px;
+}
+
+#login .login_label {
+	width: 150px;
+}
+
+#signup thead {
+	font-size: 25px;
+}
+
+#signup .signup_label {
+	width: 150px;
+}
+
+#history {
+	width: 810px;
+	border: 0px;
+	border-collapse: collapse;
+}
+
+#history .table-created {
+	width:210px;
+}
+
+#history .history-cell {
+	width: 40px;
+	font-size: 16px;
+}
+
+#history tbody {
+	vertical-align: top;
+}
+
+
+
+
