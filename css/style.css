@@ -1,7 +1,7 @@
 /** {
 	border: solid;
-}*/
-
+}
+*/
 /* generic styles */
 
 body {
@@ -17,19 +17,22 @@ body {
 	color: red;
 }
 
+a {
+	color: grey;
+}
+
 
 /* element styles */
 
 header a.main-title {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-decoration: none;
     float: left;	
 }
 
 header a {
 	font-size: 16px;
-	color: gray;
 	text-decoration: none;
 }
 
@@ -38,9 +41,10 @@ header .authorize {
 	float: right;
 }
 
-header .edit_history, .edit_view, .history {
+header .edit_history, .edit_view, .history, .view {
+	color: grey;
 	float: right;
-	margin-right: 10px;
+	margin-right: 30px;
 }
 
 br.clear {
@@ -48,15 +52,15 @@ br.clear {
 }
 
 #page {
-	background-color: #eee;
-	padding: 20px;
+	border: 1px dashed grey;
+	padding: 10px;
 	width: 800px;
-	min-height: 400px;
+	min-height: 300px;
 }
 
 #edit textarea {
 	width: 800px;
-	height: 400px;
+	height: 300px;
 }
 
 #login thead {
@@ -94,6 +98,9 @@ br.clear {
 	vertical-align: top;
 }
 
-
+footer {
+	margin-top: 20px;
+	font-size: 15px;
+}
 
 

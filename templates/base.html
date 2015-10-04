@@ -25,9 +25,9 @@
 					<!-- buttons visible on page.html and edit.html -->
 					{% if main %}
 					<div class="edit_history">
-						<a class="edit" href="/_edit{{path}}">edit</a>
+						<a href="/_edit{{path}}">edit </a>
 						|
-						<a class="history" href="/_history{{path}}">history</a>	
+						<a href="/_history{{path}}"> history</a>	
 					</div>
 							
 					{% endif %}
@@ -35,9 +35,9 @@
 					<!-- buttons visible on page history.html -->
 					{% if history %}
 					<div class="edit_view">
-						<a class="edit" href="/_edit{{path}}">edit</a>
+						<a href="/_edit{{path}}">edit</a>
 						|
-						<a class="view" href="{{path}}">view</a>
+						<a href="{{path}}">view</a>
 					</div>			
 					{% endif %}
 
@@ -58,14 +58,18 @@
 
 					<!-- buttons visible on page.html and edit.html -->
 					{% if main %}
-					<a class="history" href="/_history{{path}}">history</a>			
+					<div class="history">
+						<a href="/_history{{path}}">history</a>
+					</div>
+								
 					{% endif %}
 
 					<!-- buttons visible history.html -->
 					{% if history %}
-					<a class="history" href="{{path}}">view</a>			
+					<div class="view">
+						<a href="{{path}}">view</a>		
+					</div>
 					{% endif %}
-
 
 				</nav>
 
@@ -73,8 +77,13 @@
 
 		</header>
 		<br class="clear"/>
-			{% block content %}
-			{% endblock %}
+		
+		{% block content %}
+		{% endblock %}
+
+		<footer>
+			&copy; Stijn Blommerde
+		</footer>
 				
 	</body>
 	

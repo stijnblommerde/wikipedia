@@ -221,7 +221,7 @@ class WikiPageHandler(BaseHandler):
 
         # automatically create a homepage
         if not page and path == '/':
-            page = Page.make_page('/', 'welcome', 1)
+            page = Page.make_page('/', 'Blank page', 1)
             page.put()
             time.sleep(0.5)
 
